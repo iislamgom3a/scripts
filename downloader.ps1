@@ -1,4 +1,6 @@
-# yt-dlp-downloader.ps1
+# powershell script for Media Downlaoding  
+# Author : Islam Gomaa 
+# GitHub : https://github.com/iislamgom3a/
 
 # Get the user's Downloads folder
 $DownloadDir = [Environment]::GetFolderPath("UserProfile") + "\Downloads"
@@ -7,7 +9,7 @@ $DownloadDir = [Environment]::GetFolderPath("UserProfile") + "\Downloads"
 if (-not (Get-Command yt-dlp -ErrorAction SilentlyContinue)) {
     Write-Host "yt-dlp is not installed or not in PATH." -ForegroundColor Red
     Write-Host "Installing ty-dlp package......" -ForegroundColor Yellow
-    winget install yt-dlp -y
+    winget install yt-dlp 
     exit
 }
 
